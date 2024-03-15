@@ -1,3 +1,5 @@
+# Data-hiding-using-TDS--Java
+
 This program Embeds a 56x56 pixel secret image into a cover image of dynamic size using Transform Domain Steganography (TDS) and then decrypts the same from the cover image.
 
 This File consists of five .java files: ConsoleOutput.java, EmbedData.java, ExtractData.java, ImgOperation.java and TDS.java. The Working and function of each file is explained below.

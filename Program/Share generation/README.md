@@ -1,3 +1,5 @@
+# Public-Private-Share-Generation-using-Java
+
 ShareGenerator.java takes an image file as input and generates 2 shares privateshare.png, and publicshare.png and can also rejoin them to make originalshare.png
 
 ## Unzipping The folder
