@@ -10,34 +10,35 @@ To use the project, unzip the contents of the ZIP/RAR file and run EmbedData.jav
 
 # EmbedData.java
 
-        The Program takes in the following arguments:
+The Program takes in the following arguments:
 
-            - Cover image from client-assets/cover-img/
-            - Secret image from client-assets/secret-images/
+- Cover image from client-assets/cover-img/
+- Secret image from client-assets/secret-images/
 
-        The Steganographed Image is stored in client-assets/stego-output/cover.png
+The Steganographed Image is stored in client-assets/stego-output/cover.png
 
-        Each variable can be edited to take in any file as required. The secret image needs to be a 56x56 pixel Image.
+Each variable can be edited to take in any file as required. The secret image needs to be a 56x56 pixel Image.
 
-        The program makes use of hideSecretImage class in TDS.java which in turn uses ImgOperation.java and ConsoleOutput.java
+The program makes use of hideSecretImage class in TDS.java which in turn uses ImgOperation.java and ConsoleOutput.java
 
 # ExtractData.java
 
-        The Program takes client-assets/stego-output/cover.png as input and the Extracted Images are stored in server-assets/extracted-fPrints.
+The Program takes client-assets/stego-output/cover.png as input and the Extracted Images are stored in server-assets/extracted-fPrints.
 
-        The program makes use of extractSecretImage class in TDS.java which in turn uses ImgOperation.java and ConsoleOutput.java
+The program makes use of extractSecretImage class in TDS.java which in turn uses ImgOperation.java and ConsoleOutput.java
 
 # ConsoleOutput.java
 
-        The ConsoleOutput class contains methods for printing formatted output to the console.
+The ConsoleOutput class contains methods for printing formatted output to the console.
 
 # ImgOperation.java
 
-        The ImgOperationClass turns the pixels of a bufferedImage into a 4D Array for modification
+The ImgOperationClass turns the pixels of a bufferedImage into a 4D Array for modification
 
 # TDS.java
-        This file contains methods for hiding and extracting secret images inside cover images using transform domain steganography.
-        The file contains the following methods:
-        * hideSecretImage(): This method hides the secret image inside the cover image using the DWT (Discrete Wavelet Transform) technique.
-        * extractSecretImage(): This method extracts the secret image from the cover image using the DWT technique.
+
+This file contains methods for hiding and extracting secret images inside cover images using transform domain steganography.
+The file contains the following methods:
+* hideSecretImage(): This method hides the secret image inside the cover image using the DWT (Discrete Wavelet Transform) technique.
+* extractSecretImage(): This method extracts the secret image from the cover image using the DWT technique.
 

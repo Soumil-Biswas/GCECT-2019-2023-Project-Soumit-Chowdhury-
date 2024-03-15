@@ -10,9 +10,9 @@ This Project Repository consists of the following:
 
 -  `Program` Folder
    -  `Audio Video Authentication` Folder
-      - `MATLAB Audio Graph`: A MATLAB program to Create Audio Graphs (Spectrograms) of an Audio file. 
+      - `MATLAB Audio Graph`: A MATLAB program to Create Audio Graphs (Spectrograms) of an Audio file. [README](./Program/Audio%20video%20Authentication/MATLAB%20Audio%20Graph/README.md)
       - `MATLAB-PSNR-SSIM-CC-MSE-BER-Authentication`: A MATLAB program to compare two Image files using PSNR, SSIM, MSE and CC values. [(README)](./Program/Audio%20video%20Authentication/MATLAB-PSNR-SSIM-CC-MSE-BER-Authentication/README.md)
-      - `Noisemaker`: A simple MATLAB program to create digital noise in an image.
+      - `Noisemaker`: A simple MATLAB program to create digital noise in an image. [README](./Program/Audio%20video%20Authentication/Noisemaker/README.md)
       - `samples/Naturalreaders Sample Voices`: A sample of voice recordings from [NaturalReader](https://www.naturalreaders.com/).  
    -  `Data Hiding`: A Java program for embedding images into a cover image using TDS. [(README)](./Program/Data%20Hinding/README.md)
    -  `Fingerprint Verification`: A MATLAB program for SIFT fingerprint verification. [(README)](./Program/Fingerprint%20Verification/README.md)
