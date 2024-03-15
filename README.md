@@ -11,12 +11,12 @@ This Project Repository consists of the following:
 -  `Program` Folder
    -  `Audio Video Authentication` Folder
       - `MATLAB Audio Graph`: A MATLAB program to Create Audio Graphs (Spectrograms) of an Audio file. 
-      - `MATLAB-PSNR-SSIM-CC-MSE-BER-Authentication`: A MATLAB program to compare two Image files using PSNR, SSIM, MSE and CC values. [(README)](https://github.com/Soumil-Biswas/GCECT-2019-2023-Project-Soumit-Chowdhury-/blob/main/Program/Audio%20video%20Authentication/MATLAB-PSNR-SSIM-CC-MSE-BER-Authentication/README.md)
+      - `MATLAB-PSNR-SSIM-CC-MSE-BER-Authentication`: A MATLAB program to compare two Image files using PSNR, SSIM, MSE and CC values. [(README)](./Program/Audio%20video%20Authentication/MATLAB-PSNR-SSIM-CC-MSE-BER-Authentication/README.md)
       - `Noisemaker`: A simple MATLAB program to create digital noise in an image.
       - `samples/Naturalreaders Sample Voices`: A sample of voice recordings from [NaturalReader](https://www.naturalreaders.com/).  
-   -  `Data Hiding`: A Java program for embedding images into a cover image using TDS. [(README)](https://github.com/Soumil-Biswas/GCECT-2019-2023-Project-Soumit-Chowdhury-/blob/main/Program/Data%20Hinding/README.md)
-   -  `Fingerprint Verification`: A MATLAB program for SIFT fingerprint verification. [(README)](https://github.com/Soumil-Biswas/GCECT-2019-2023-Project-Soumit-Chowdhury-/blob/main/Program/Fingerprint%20Verification/README.md)
-   -  `Share Generation`: A Java Program for generating private and public shares for a document, alongwith its hash keys. [(README)](https://github.com/Soumil-Biswas/GCECT-2019-2023-Project-Soumit-Chowdhury-/blob/main/Program/Share%20generation/README.md)
+   -  `Data Hiding`: A Java program for embedding images into a cover image using TDS. [(README)](./Program/Data%20Hinding/README.md)
+   -  `Fingerprint Verification`: A MATLAB program for SIFT fingerprint verification. [(README)](./Program/Fingerprint%20Verification/README.md)
+   -  `Share Generation`: A Java Program for generating private and public shares for a document, alongwith its hash keys. [(README)](./Program/Share%20generation/README.md)
 
 -  `Project` Folder
    - `Project V4 sem 8 (Final).pptx` Powerpoint presentation for the Project Overview
