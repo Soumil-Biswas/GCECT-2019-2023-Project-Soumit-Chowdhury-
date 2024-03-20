@@ -1,0 +1,78 @@
+#bg {
+    background-image: url('images//home.jpg');
+    background-repeat: no-repeat;
+    background-size: 1800px 900px;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    font-family: unispace;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+bar{
+    display: flex;
+    border: 2px solid rgba(128, 128, 128, 0.63);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#blemish {
+    position: absolute;
+    margin-left: 70px;
+    width: 90%;
+    background: hsl(0, 0%, 100%, 0.3);
+    border-radius: 10px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    top: 25%;
+}
+
+part {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+part label{
+    width: 500px;
+}
+
+part label p{
+    padding: 2%;
+    font-size: 20px;
+}
+
+part field form input{
+    display: block;
+    margin: 35px;
+}
+
+.next-btn{
+    display: block;
+    width: max-content;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px 20px 5px 20px;
+    font-family: bebas neue;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.next-btn:hover{
+    border-color: white;
+    color: white;
+    background-color: rgb(150, 181, 182);
+    transition: 0.45s;
+}

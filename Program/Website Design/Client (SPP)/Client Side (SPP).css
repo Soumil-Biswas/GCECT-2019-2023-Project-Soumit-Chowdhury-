@@ -1,0 +1,155 @@
+#bg {
+    background-image: url('images//home.jpg');
+    background-repeat: no-repeat;
+    background-size: 1800px 900px;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    font-family: unispace;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+bar{
+    display: flex;
+    border: 2px solid rgba(128, 128, 128, 0.63);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#blemish {
+    background: hsl(0, 0%, 100%, 0.5);
+    border-radius: 10px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+part {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+part label{
+    width: 500px;
+}
+
+part label p{
+    padding: 2%;
+    font-size: 20px;
+}
+
+part field form input{
+    display: block;
+    margin: 35px;
+}
+
+.next-btn{
+    display: block;
+    width: max-content;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px 20px 5px 20px;
+    font-family: bebas neue;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.next-btn:hover{
+    border-color: white;
+    color: white;
+    background-color: rgb(150, 181, 182);
+    transition: 0.45s;
+}
+
+/*---File upload---*/
+
+fileupload {
+    display: flex;
+    margin: 10px;
+    border: 3px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+stag{
+    display: block;
+}
+
+.upload-btn{
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 10px;
+    padding: 5px;
+    font-family: bebas neue;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-btn:hover{
+    border-color: white;
+    color: white;
+    background-color: cadetblue;
+    transition: 0.45s;
+}
+
+h2{
+    font-size: 15px;
+    color: red;
+    margin-left: 10px;
+}
+
+/*--- Transaction Confirmation ---*/
+
+.transaction-page{
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+}
+
+h3{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.next2-btn{
+    display: block;
+    width: max-content;
+    margin-left: 47.5%;
+    margin-top: 10px;
+    padding: 5px 20px 5px 20px;
+    font-family: bebas neue;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.next2-btn:hover{
+    border-color: white;
+    color: white;
+    background-color: rgb(150, 181, 182);
+    transition: 0.45s;
+}
+

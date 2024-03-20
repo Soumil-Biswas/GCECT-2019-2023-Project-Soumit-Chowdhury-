@@ -1,0 +1,99 @@
+#bg {
+    background-image: url('images//skyline-day.jpg');
+    background-repeat: no-repeat;
+    background-size: 1800px 900px;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+
+#blemish {
+  background: hsl(0, 0%, 100%, 0.5);
+  border-radius: 10px;
+  padding-bottom: 1%;
+}
+
+topsection{
+  display: flex;
+  padding: 13px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+topsection img{
+  width: 50px;
+  border-radius: 5px;
+}
+
+bar{
+  display: flex;
+  border: 2px solid rgba(128, 128, 128, 0.63);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+
+part {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+part label{
+  width: 500px;
+}
+
+part label p{
+  padding: 2%;
+}
+
+
+part field form input{
+  display: block;
+  margin: 35px;
+}
+
+p {
+    font-family:Arial;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+fileupload {
+  display: flex;
+  margin: 10px;
+  border: 3px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+stag{
+  display: block;
+}
+
+#submit{
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 30px;
+  padding: 0 5px;
+  font-family: bebas neue;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  border: 2px solid;
+  border-color: cadetblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#uploadbtn:hover{
+  border-color: white;
+  color: white;
+  background-color: cadetblue;
+  transition: 0.45s;
+}
