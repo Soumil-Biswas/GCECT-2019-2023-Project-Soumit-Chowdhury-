@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="USCDE.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>University Side Candidate Database Entry (USCDE)</title>
+</head>
+
+<body id="bg">
+
+<div id="blemish">
+
+    <topsection>
+        <a href="University Side Candidate Database Entry.html"><img src="images/logo.png"></a>
+        <p style="text-align: center; font-size: 30px; font-family: Unispace;">
+            University Side Candidate Database Entry (U S C D E)
+        </p>
+        <a href="University Side Candidate Database Entry.html"><img src="images/logo.png"></a>
+    </topsection>
+
+    <bar></bar>
+
+    <section>
+        <part>
+            <label>
+                <p>Name:</p>
+                <p>Roll Number:</p>
+                <p>University/College/School/Institute Name:</p>
+                <p>Year of Passing:</p>
+                <p>DGPA:</p>
+            </label>
+            <field>
+                <form style="margin-left: 10px">
+                    <input type="text" id="studentname" placeholder="Name"/>
+                    <input type="text" id="roll" placeholder="Roll Number"/>
+                    <input type="text" id="university" placeholder="Institute"/>
+                    <input type="text" id="yop" placeholder="Year of Passing"/>
+                    <input type="text" id="dgpa" placeholder="DGPA"/>
+                </form>
+            </field>
+        </part>
+    </section>
+
+    <fileupload>
+        <stag>
+            <p style="margin-left: 0">Upload Institution Logo Watermark - Private Share (Filetype: .png only):</p>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" id = "logo" name="document" accept=".png">
+            </form>
+        </stag>
+    </fileupload>
+
+    <fileupload>
+        <stag>
+            <p style="margin-left: 0">Upload Student's Fingerprint (Filetype: .png only):</p>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" id = "fingerprint" name="document" accept=".png">
+            </form>
+        </stag>
+    </fileupload>
+
+    <fileupload>
+        <stag>
+            <p style="margin-left: 0">Upload Student's Secret Voice Password (Filetype: .wav only):</p>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" id = "voice" name="document" accept=".wav">
+            </form>
+        </stag>
+    </fileupload>
+
+    <fileupload>
+        <stag>
+            <p style="margin-left: 0">Upload Student's Report Card (Filetype: .pdf only):</p>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" id = "pdf_input" name="document" accept=".pdf">
+            </form>
+        </stag>
+    </fileupload>
+
+    <button type="button" id="submit">Submit</button>
+    <script src="USCDE.js"></script>
+
+</div>
+
+</body>
+</html>
