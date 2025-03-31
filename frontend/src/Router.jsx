@@ -11,7 +11,6 @@ import UniForm from "./components/Uni_form/UniForm";
 import StudentForm from "./components/Student_form/StudentForm";
 
 import OfficeForm from "./components/Office_form/OfficeForm";
-import Form from "./components/Office_form/components/Form";
 import Step1OTP from "./components/Office_form/components/Step1OTP";
 import Step1 from "./components/Office_form/components/Step1";
 import Step2Info from "./components/Office_form/components/Step2Info";
