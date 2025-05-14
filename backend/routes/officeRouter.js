@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { checkDGPA, findStudent, getFingerprint, getAudio, getReportCard, enterTransaction } from "../middleware/dbQueries";
-import { generateOTP, saveOTP, sendOTP, sendTransactionID, verifyOTP } from "../middleware/otp";
-import { dataHiding, originalSharePath, shareMerging } from "../middleware/javaFunctions";
-import upload from "../middleware/multerInit";
-import { hashTransaction } from "../middleware/bcrypt";
-import { hideTransaction } from "../middleware/fileOp";
+import { checkDGPA, findStudent, getFingerprint, getAudio, getReportCard, enterTransaction } from "../middleware/dbQueries.js";
+import { generateOTP, saveOTP, sendOTP, sendTransactionID, verifyOTP } from "../middleware/otp.js";
+import { dataHiding, originalSharePath, shareMerging } from "../middleware/javaFunctions.js";
+import upload from "../middleware/multerInit.js";
+import { hashTransaction } from "../middleware/bcrypt.js";
+import { hideTransaction } from "../middleware/fileOp.js";
 
 const route = Router();
 

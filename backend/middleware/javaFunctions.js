@@ -40,7 +40,7 @@ export const dataHiding = async (coverImgpath, secretImgpath) => {
         await executeJava(javaCommand); // Wait for Java execution to complete
         console.log("Java execution finished.");
     } catch (error) {
-        console.error("Java execution failed:", error);
+        // console.error("Java execution failed:", error);
         throw error; // Re-throw error so caller can handle it
     }
 

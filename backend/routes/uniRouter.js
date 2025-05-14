@@ -1,6 +1,6 @@
 import { Router } from "express";
 import upload from "../middleware/multerInit.js";
-import { cleanFiles, fileInit, handleFileOperation } from "../middleware/fileOp.js";
+import { checkFileSizes, cleanFiles, fileInit, handleFileOperation } from "../middleware/fileOp.js";
 import { createDBEntry } from "../middleware/dbQueries.js";
 
 const route = Router();
@@ -21,10 +21,13 @@ route.post('/submitReportCard',
             // console.log("files: ");
             // console.log(request.files);
 
+            let {error:sizeError} = checkFileSizes(request.files);
+            if (sizeError) return response.status(400).send(sizeError);
+
             let {error, reportCardFile, logoFile, fingerprintFile, audioFile} = fileInit(request.files);
             if (error) return response.status(400).send(error);
 
-            let publicSharePath = handleFileOperation(reportCardFile, logoFile, fingerprintFile, audioFile);
+            let publicSharePath = await handleFileOperation(reportCardFile, logoFile, fingerprintFile, audioFile);
             
             const data = request.body;
             Object.assign(data, {

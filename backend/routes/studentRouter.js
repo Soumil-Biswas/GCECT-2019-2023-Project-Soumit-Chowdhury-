@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { unHashTransaction } from "../middleware/bcrypt";
-import { getTransaction } from "../middleware/dbQueries";
+import { unHashTransaction } from "../middleware/bcrypt.js";
+import { getTransaction } from "../middleware/dbQueries.js";
 
 const route = Router();
 

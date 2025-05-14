@@ -1,6 +1,30 @@
 import fs from "fs";
 import { dataHiding, shareGeneration } from '../middleware/javaFunctions.js';
 
+const MAX_SIZES = {
+  logo: 100 * 1024,         // 100 KB
+  fingerprint: 200 * 1024,  // 200 KB (example)
+  audio: 500 * 1024,        // 500 KB (example)
+};
+
+export const checkFileSizes = (files) => {
+    let errormsg;
+
+    if (files.logo.size > MAX_SIZES.logo) {
+        errormsg = "logo file should not exceed 10KB.";
+    }
+    if (files.fingerprint.size > MAX_SIZES.fingerprint) {
+        errormsg = "fingerprint file should not exceed 10KB.";
+    }
+    if (files.audio.size > MAX_SIZES.audio) {
+        errormsg = "audio file should not exceed 10KB.";
+    }
+    if (errormsg) return {error : errormsg};
+
+    return null;
+}
+
+// Check if all required Files are present
 export const fileInit = (files) => {
     // Ensure the "Report_Card" field is present
     let errormsg;
@@ -27,20 +51,23 @@ export const fileInit = (files) => {
     return {reportCardFile, logoFile, fingerprintFile, audioFile}
 }
 
+// Hnadle Incoming Files. Zip secret files, and embed them in Report Card
 export const handleFileOperation = async (reportCardFile, logoFile, fingerprintFile, audioFile) => {
     console.log("Hiding Uni Logo...");
     const stego1 = await dataHiding(reportCardFile.path, logoFile.path);
-    // console.log("Hiding Fingerprint...");
-    // const stego2 = await dataHiding(stego1, fingerprintFile.path);
-    // console.log("Hiding Audio...");
-    // const stego3 = await dataHiding(stego2, audioFile.path);
+    console.log("Hiding Fingerprint...");
+    const stego2 = await dataHiding(stego1, fingerprintFile.path);
+    console.log("Hiding Audio...");
+    const stego3 = await dataHiding(stego2, audioFile.path);
     
-    // const publicSharePath = await shareGeneration(stego3);
-    const publicSharePath = await shareGeneration(stego1);
+    condole.log("Generating Public and Private shares...")
+    const publicSharePath = await shareGeneration(stego3);
+    // const publicSharePath = await shareGeneration(stegoImagePath);
 
     return publicSharePath;
 }
 
+// Clean Files from File System
 export const cleanFiles = () => {
     try {
         fs.unlinkSync(reportCardFile.path); // Remove the uploaded Report_Card file
@@ -52,12 +79,13 @@ export const cleanFiles = () => {
     }
 }
 
+// Embed Transaction Data into Report Card
 export const hideTransaction = async (originalSharePath, fingerprintFile) => {
     let fingerprint2Path = fingerprintFile.path;
 
     const stego = await dataHiding(originalSharePath, fingerprint2Path);
 
-    const publicSharePath = await shareGeneration(stego1);
+    const publicSharePath = await shareGeneration(stego);
 
     return publicSharePath;
 }
