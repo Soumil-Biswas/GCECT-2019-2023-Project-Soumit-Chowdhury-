@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { checkDGPA, findStudent, getFingerprint, getAudio, getReportCard, enterTransaction } from "../middleware/dbQueries.js";
 import { generateOTP, saveOTP, sendOTP, sendTransactionID, verifyOTP } from "../middleware/otp.js";
-import { dataHiding, originalSharePath, shareMerging } from "../middleware/javaFunctions.js";
+import { originalSharePath, shareMerging } from "../middleware/javaFunctions.js";
 import upload from "../middleware/multerInit.js";
 import { hashTransaction } from "../middleware/bcrypt.js";
 import { hideTransaction } from "../middleware/fileOp.js";
@@ -115,9 +115,9 @@ route.get('/Finger',
 
         // Now this is the part where you use MATLAB to compare Fingerprints
 
-        let verifyFinger;
+        let verifyFinger = true;
 
-        if(verifyFinger){
+        if(!verifyFinger){
             return res.status(404).send('Student fingerprint does not match')
         }
 
@@ -151,9 +151,9 @@ route.get('/Audio',
 
         // Now this is the part where you use MATLAB to compare audio
 
-        let verifyAudio;
+        let verifyAudio = true;
 
-        if(verifyAudio){
+        if(!verifyAudio){
             return res.status(404).send('Student audio does not match')
         }
 

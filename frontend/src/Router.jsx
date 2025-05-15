@@ -17,12 +17,18 @@ import Step2Info from "./components/Office_form/components/Step2Info";
 import Step2 from "./components/Office_form/components/Step2";
 import Step3 from "./components/Office_form/components/Step3";
 import Step4 from "./components/Office_form/components/Step4";
+import Success from "./components/Home/components/success";
+import StepU from "./components/Uni_form/components/StepU";
+import Form from "./components/Student_form/components/Form";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path="USCDE" element={<UniForm />} />
+            <Route path="USCDE" element={<UniForm />}>
+                <Route index element={<StepU/>}/>
+                <Route path="success" element={<Success/>}/>
+            </Route>
             <Route path="SOCV" element={<OfficeForm />}>
                 <Route index element={<Step1OTP/>}/>
                 <Route path="Step1" element={<Step1/>}/>
@@ -30,8 +36,12 @@ export const router = createBrowserRouter(
                 <Route path="Step2" element={<Step2/>}/>
                 <Route path="Step3" element={<Step3/>}/>
                 <Route path="Step4" element={<Step4/>}/>
+                <Route path="success" element={<Success/>}/>
             </Route>
-            <Route path="SSSVP" element={<StudentForm />} />
+            <Route path="SSSVP" element={<StudentForm />}>
+                <Route index element={<Form/>}/>
+                <Route path="success" element={<Success/>}/>
+            </Route>
 
             <Route
                 path="*"

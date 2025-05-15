@@ -47,14 +47,14 @@ route.post('/submitReportCard',
                 console.error('Error sending file:', sendErr.message);
                 return response.status(500).send('Error sending file');
                 }
-        
-                // Cleanup uploaded file and output files
-                // cleanFiles();
+                // Don't cleanup files on success. We need the files later.
             });
 
         } catch (error) {
             console.error("Unexpected error:", error.message);
-            response.status(500).send("Internal Server Error");            
+            response.status(500).send("Internal Server Error");
+            // Cleanup uploaded file and output files
+            cleanFiles();       
         }
     }
 );

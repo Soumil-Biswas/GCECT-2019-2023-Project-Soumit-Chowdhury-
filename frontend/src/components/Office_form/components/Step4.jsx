@@ -53,7 +53,9 @@ export default function Step4() {
                 error={errors.fingerprint}
             /> 
             <div className="mt-10 flex flex-row sm:flex-row w-full justify-between">
-                <button className="form-button" type="submit">Submit</button>
+                <Link to={"/SOCV/success"}>
+                  <button className="form-button" type="submit">Submit</button>
+                </Link>
                 <Link className="form-button" to={"/"}>Reutrn Home</Link>
             </div>
         </form>

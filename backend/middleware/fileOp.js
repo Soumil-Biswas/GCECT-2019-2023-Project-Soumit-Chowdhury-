@@ -1,10 +1,12 @@
 import fs from "fs";
 import { dataHiding, shareGeneration } from '../middleware/javaFunctions.js';
 
+let uploadedFiles;
+
 const MAX_SIZES = {
-  logo: 100 * 1024,         // 100 KB
-  fingerprint: 200 * 1024,  // 200 KB (example)
-  audio: 500 * 1024,        // 500 KB (example)
+  logo: 150 * 1024,         // 150 KB
+  fingerprint: 150 * 1024,  // 150 KB (example)
+  audio: 150 * 1024,        // 150 KB (example)
 };
 
 export const checkFileSizes = (files) => {
@@ -21,11 +23,12 @@ export const checkFileSizes = (files) => {
     }
     if (errormsg) return {error : errormsg};
 
-    return null;
+    return {error : null};
 }
 
 // Check if all required Files are present
 export const fileInit = (files) => {
+    uploadedFiles = files;
     // Ensure the "Report_Card" field is present
     let errormsg;
     if (!files || !files.reportCard) {
@@ -60,7 +63,7 @@ export const handleFileOperation = async (reportCardFile, logoFile, fingerprintF
     console.log("Hiding Audio...");
     const stego3 = await dataHiding(stego2, audioFile.path);
     
-    condole.log("Generating Public and Private shares...")
+    console.log("Generating Public and Private shares...")
     const publicSharePath = await shareGeneration(stego3);
     // const publicSharePath = await shareGeneration(stegoImagePath);
 
@@ -70,10 +73,10 @@ export const handleFileOperation = async (reportCardFile, logoFile, fingerprintF
 // Clean Files from File System
 export const cleanFiles = () => {
     try {
-        fs.unlinkSync(reportCardFile.path); // Remove the uploaded Report_Card file
-        fs.unlinkSync(logoFile.path);
-        fs.unlinkSync(fingerprintFile.path);
-        fs.unlinkSync(audioFile.path);
+        fs.unlinkSync(uploadedFiles.reportCard[0].path); // Remove the uploaded Report_Card file
+        fs.unlinkSync(uploadedFiles.logo[0].path);
+        fs.unlinkSync(uploadedFiles.fingerprint[0].path);
+        fs.unlinkSync(uploadedFiles.audio[0].path);
     } catch (cleanupErr) {
         console.error("Cleanup error:", cleanupErr.message);
     }

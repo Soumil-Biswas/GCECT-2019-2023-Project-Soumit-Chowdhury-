@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
-import Form from './components/Form'
+import React from 'react'
 import Header from './components/Header'
+import { Outlet } from 'react-router-dom'
 
 
 export default function UniForm() {
-  const [notify, setNotify] = useState("");
 
   return (
     <div className="grid [grid-template-areas:'stack']">
@@ -21,11 +20,7 @@ export default function UniForm() {
             In the other site, the agency also adds their share of the student's information 
             to match with the existing databse entry and verify the student's identity.
           </p>
-          {(notify === "") ?
-            <Form setNotify={setNotify}/>
-            :
-            <p className='text-center font-bold text-red-600'>{notify}</p>
-          }
+          <Outlet/>
         </div>
       </div>   
     </div>

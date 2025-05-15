@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
-import Form from './components/Form'
+import React from 'react'
 import Header from './components/Header'
+import { Outlet } from 'react-router-dom';
 
 
 export default function StudentForm() {
-  const [notify, setNotify] = useState("");
 
   return (
     <div className="grid [grid-template-areas:'stack']">
@@ -20,11 +19,7 @@ export default function StudentForm() {
             This is the website where the Student can enter the transaction details to view the status of their scholarship. 
             This step is mandatory to ensure the amount listed has actually entered the student's account.
           </p>
-          {(notify === "") ?
-            <Form setNotify={setNotify}/>
-            :
-            <p className='text-center font-bold text-red-600'>{notify}</p>
-          }
+          <Outlet/>
         </div>
       </div>   
     </div>
